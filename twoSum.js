@@ -3,36 +3,36 @@
 // You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
 function twoSum(array, sum) {
-  const cache = {}
-  var indexs = [];
+  const cache = {};
+  let indexs = [];
 
-  for (var i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     // change int to string
-    var num = array[i].toString();
+    const num = array[i].toString();
     // caching
     if (cache[num] === undefined) {
       cache[num] = i;
     } else {
-      cache[num]++
+      cache[num]++;
     }
   }
 
   // loop cache and search for diff
-  for (var number in cache) {
+  for (const number in cache) {
     // get diff because that is the number we are looking for
-    var difference = sum - array[cache[number]];
+    const difference = sum - array[cache[number]];
     // console.log(`I am the difference: ${difference}`)
     // change number string into int
-    var numInt = parseInt(number);
+    const numInt = parseInt(number);
     // console.log(`I am the numInt: ${numInt}`)
     // check to see if the key matchs the diff
     if ((numInt + difference) === sum) {
-      indexs = [cache[numInt], cache[difference]]
+      indexs = [cache[numInt], cache[difference]];
     } else {
       continue;
     }
   }
-  return indexs
+  return indexs;
 }
 
 console.log(twoSum([6, 13, 5, 1], 18));
