@@ -1,15 +1,17 @@
-function reverseInt(number) {
+function reverseInteger(number) {
+  let result = 0;
+  let intA = number;
 
+  while (intA !== 0) {
+    // get last digit, which is 1
+    const lastDigit = intA % 10;
+
+    result *= 10;
+    result += lastDigit;
+    intA -= lastDigit;
+    intA /= 10;
+  }
+  return result;
 }
 
-console.log(reverseInt(123)); // 321
-
-
-// Notes
-
-// mathmatically we can use dividing by 10 to lop move decimal places and modulo 10 to grab the actual #
-// take the ones place from number and add it to the result 
-// number = 321 result = 0
-// number = 32 result = 1
-// number = 3 result = 12
-// number = 0 result = 123
+module.exports = { reverseInteger };

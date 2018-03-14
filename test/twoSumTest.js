@@ -1,9 +1,9 @@
 // require the expect library
 const { expect } = require('chai');
 // from the groupAnas files require the groupAnas method
-const groupAnas = require('../groupAnas').groupAnas;
+const { groupAnas } = require('../groupAnas');
 // require the variable testME
-const testME = require('../groupAnas').testME;
+const { testME } = require('../groupAnas');
 
 // create a family of tests
 describe('Anagrams', () => {

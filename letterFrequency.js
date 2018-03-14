@@ -1,3 +1,7 @@
+function isValid(str) {
+  return !/[~`!#$%^&*+=\-[\]\\';,/{}|\\":<>?]/g.test(str);
+}
+
 function letterFrequency(string, target) {
   const targetLowerCase = target.toLowerCase();
   // if letter is not in string
@@ -12,19 +16,15 @@ function letterFrequency(string, target) {
   // eliminate spaces and eliminate caps
   const letters = string.toLowerCase().split(' ').join('').split('');
 
-  letters.map((letter) => {
+  letters.forEach((letter) => {
     if (cache[letter] === undefined) {
       cache[letter] = 1;
     } else {
-      cache[letter]++;
+      cache[letter] += 1;
     }
   });
 
   return cache[targetLowerCase];
-}
-
-function isValid(str) {
-  return !/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g.test(str);
 }
 
 module.exports = {

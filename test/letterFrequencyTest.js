@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const letterFrequency = require('../letterFrequency').letterFrequency;
+const { letterFrequency } = require('../letterFrequency');
 
 describe('Letter Frequency', () => {
   describe('letterFrequency', () => {

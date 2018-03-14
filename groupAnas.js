@@ -1,7 +1,7 @@
 function groupAnas(array) {
   const cache = {};
 
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i += 1) {
     const anagram = array[i];
     const sortedAna = anagram.split('').sort().join('');
 
@@ -15,7 +15,6 @@ function groupAnas(array) {
 }
 
 const testME = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'];
-console.log(groupAnas(testME)); // [ ["ate", "eat","tea"], ["nat","tan"], ["bat"] ]
 
 module.exports = {
   groupAnas,
