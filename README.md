@@ -28,17 +28,17 @@ For example, given: ["eat", "tea", "tan", "ate", "nat", "bat"], Return:
 
 Given a string and a target letter, determine how many times that letter appears in the given string.
 
-###Valid Parens
+### Valid Parens
 
 Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
 The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
 
-###Is Palindrome: Integers
+### Is Palindrome: Integers
 
 Determine whether an integer is a palindrome.
 
-###Nim
+### Nim
 
 You are playing the following Nim Game with your friend: There is a heap of stones on the table, each time one of you take turns to remove 1 to 3 stones. The one who removes the last stone will be the winner. You will take the first turn to remove the stones.
 
